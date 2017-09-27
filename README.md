@@ -26,4 +26,4 @@ To start json server, run the following command in separate window :
 $ json-server --watch db.json
 ```
 
-Now, navaigate to [localhost:4200](localhost:4200) to run the app.
+Now, navaigate to [localhost:4200](http://localhost:4200) to run the app.
