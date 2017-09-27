@@ -1,4 +1,4 @@
-export const selectedItem = (state: any = null, {type, payload}) => {
+export function selectedItem(state: any = null, {type, payload}) {
   switch (type) {
     case 'SELECT_ITEM':
       return payload;

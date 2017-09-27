@@ -1,4 +1,4 @@
-export const items = (state: any = [], {type, payload}) => {
+export function items(state: any = [], {type, payload}) {
   switch (type) {
     case 'ADD_ITEMS':
       return payload;
