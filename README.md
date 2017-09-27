@@ -1,28 +1,29 @@
-# MyTodoProject
+## A simple Todo app made in Angular 4 with Redux
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.3.2.
+##### Dependencies :-
 
-## Development server
+* You must have node and npm installed.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+* You must also have json server installed. If not, run the following command :
 
-## Code scaffolding
+   ``` $ npm install -g json-server ```
+   
+##### Getting Started :
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+![Alt text](todo.png?raw=true)
 
-## Build
+To initialize the app, run the commands below :
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+```
+$ git clone https://github.com/gaurav-patil/Angular4-ToDo.git
+$ cd Angular4-ToDo
+$ npm install
+$ npm start
+```
 
-## Running unit tests
+To start json server, run the following command in separate window :
+```
+$ json-server --watch db.json
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Now, navaigate to [localhost:4200](localhost:4200) to run the app.
