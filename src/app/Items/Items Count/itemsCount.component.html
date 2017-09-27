@@ -1,0 +1,39 @@
+<ng-container>
+
+  <div class="center-filter sort">
+    <span class="bold">Sort By : </span>
+
+    <input type="radio" name="sort" value="name" [(ngModel)]="selectedSortValue"
+           (change)="onSortButtonSelectionChange()">
+    <span>Todo Task</span>
+
+    <input type="radio" name="sort" value="description" [(ngModel)]="selectedSortValue"
+           (change)="onSortButtonSelectionChange()">
+    <span>Description</span>
+
+    <input type="radio" name="sort" value="itemdate" [(ngModel)]="selectedSortValue"
+           (change)="onSortButtonSelectionChange()">
+    <span>Date</span>
+
+    <input type="radio" name="sort" value="descriptors" [(ngModel)]="selectedSortValue"
+           (change)="onSortButtonSelectionChange()">
+    <span>Category</span>
+  </div>
+
+  <div class="center-filter">
+    <span class="bold">Filter : </span>
+
+    <input type="radio" name="options" value="All" [(ngModel)]="selectedRadioButtonValue"
+           (change)="onRadioButtonSelectionChange()">
+    <span>{{"All (" + all + ")"}}</span>
+
+    <input type="radio" name="options" value="Pending" [(ngModel)]="selectedRadioButtonValue"
+           (change)="onRadioButtonSelectionChange()">
+    <span>{{"Pending (" + pending + ")"}}</span>
+
+    <input type="radio" name="options" value="Done" [(ngModel)]="selectedRadioButtonValue"
+           (change)="onRadioButtonSelectionChange()">
+    <span>{{"Done (" + done + ")"}}</span>
+  </div>
+
+</ng-container>

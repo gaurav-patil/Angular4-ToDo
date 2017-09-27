@@ -1,0 +1,16 @@
+<div class="center-header">
+  <h2>Hi, Welcome to Todo App</h2>
+</div>
+<div>
+  <div>
+    <app-items-list [items]="items | async"
+                (selected)="selectItem($event)" (deleted)="deleteItem($event)">
+    </app-items-list>
+  </div>
+  <div>
+    <app-item-detail
+      (saved)="saveItem($event)" (cancelled)="resetItem($event)"
+      [item]="selectedItem | async"
+      [descriptorList]="descriptorsList">Select an Item</app-item-detail>
+  </div>
+</div>

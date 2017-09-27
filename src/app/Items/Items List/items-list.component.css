@@ -1,0 +1,12 @@
+.list-div {
+  width: 80%;
+  margin-left: 10%;
+}
+
+.center-checkbox {
+  padding-left: 4%;
+}
+
+.strike {
+  text-decoration: line-through;
+}

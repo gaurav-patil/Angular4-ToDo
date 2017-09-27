@@ -1,0 +1,51 @@
+<div class="container-fluid">
+
+  <app-items-count [all]="getTotalItemsCount()"
+                   [pending]="getTotalItemsPending()" [done]="getTotalItemsDone()"
+                   (RadioButtonSelectionChanged)="onItemsCountRadioButtonChange($event)"
+                   (SortButtonSelectionChanged)="onSortRadioButtonChange($event)">
+
+  </app-items-count>
+  <br>
+
+  <div class="list-div" >
+  <div class="row">
+    <div class="col-sm-2 bold">Todo Task</div>
+    <div class="col-sm-2 bold">Description</div>
+    <div class="col-sm-2 bold">Date</div>
+    <div class="col-sm-2 bold">Category</div>
+    <div class="col-sm-2 bold">Completed ?</div>
+    <div class="col-sm-2 bold">Action</div>
+  </div>
+
+  <ng-container *ngFor="let item of items | orderBy: sortItemRadioButton ">
+    <div class="row" *ngIf="selectedItemCountRadioButton=='All' ||
+    ((selectedItemCountRadioButton == 'Pending') == (item.state == false)) ||
+     ((selectedItemCountRadioButton == 'Done') == (item.state == true)) ">
+      <div class="col-sm-2" [style.textDecoration]="item.state ?'line-through':'none'">
+        {{item.name}}
+      </div>
+      <div class="col-sm-2" [style.textDecoration]="item.state ?'line-through':'none'">
+        {{item.description}}
+      </div>
+      <div class="col-sm-2" [style.textDecoration]="item.state ?'line-through':'none'">
+        {{item.itemdate}}
+      </div>
+      <div class="col-sm-2" [style.textDecoration]="item.state ?'line-through':'none'">
+        {{item.descriptors}}
+      </div>
+      <div class="col-sm-2 center-checkbox">
+        <input type="checkbox" name="state" [(ngModel)]="item.state">
+      </div>
+      <div class="col-sm-2">
+        <button title="Edit {{item.name}}" [disabled]='item.state' class="btn btn-warning btn-xs" (click)="selected.emit(item); $event.stopPropagation();">
+          <span class="glyphicon glyphicon-pencil"></span>
+        </button>
+        <button title="Delete {{item.name}}" class="btn btn-danger btn-xs" (click)="deleted.emit(item); $event.stopPropagation();">
+          <span class="glyphicon glyphicon-trash"></span>
+        </button>
+      </div>
+    </div>
+  </ng-container>
+  </div>
+</div>

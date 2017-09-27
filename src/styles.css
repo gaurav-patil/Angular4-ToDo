@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+div[class="row"] {
+  border: 1px dotted #73AD21;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.box{
+  margin-top: 6% !important;
+  width: 40%;
+  border: 1px solid #73AD21;
+  padding: 10px;
+}
+
+.center{
+  margin: auto;
+  text-align: center;
+}
+
+.bold {
+  font-weight: bold;
+}
